@@ -94,7 +94,7 @@ body {
   background-color: #1d1d1e;
   z-index: 3;
 }
-.timeline-carousel__item-inner .month {
+.timeline-carousel__item-inner .title {
   font-size: 12px;
   text-transform: uppercase;
   color: #b38c52;
