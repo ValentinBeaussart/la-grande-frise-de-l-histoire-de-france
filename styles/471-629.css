@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background-color: #1d1d1e;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -.025em;
+}
+
+* {
+  outline: none;
+}
+
+.article {
+  padding: 0px 40% 90px 6.9444%;
+  position: relative;
+  overflow: hidden;
+}
+
+.article h1 {
+  color: rgb(255, 255, 255);
+  font-size: 46px;
+  line-height: 50pd;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+
+.article h3 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  font-weight: 900;
+  border-bottom: 1px solid #b38c52;
+}
+
+.article h5 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  font-weight: 900;
+}
+
+.article h6 {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+
+.article p {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  font-weight: 900;
+  line-height: 2.2em;
+}
+
+.info {
+  border: 1px solid #171717;
+  border-radius: .75rem;
+  background-color: #171717;
+  padding: 1rem;
+}
+
+.article-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: .5rem;
+  display: block;
+}
+
+.legend {
+  text-align: center;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.legend p {
+  color: #b38c52!important;
+}
+
+.article ul {
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  line-height: 50pd;
+  margin-bottom: 40px;
+  font-weight: 900;
+  line-height: 2.2em;
+}
+
+.basic-li::before {
+  content: "•";
+  color: #b38c52;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1em;
+}
+
+.map-legend-ul {
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  margin-bottom: 40px;
+  font-weight: 900;
+  line-height: 2.2em;
+}
+
+.map-legend-li {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 25px auto;
+}
+
+.map-legend-li.blue {
+  background-image: url('../images/rectangle-legend-blue.svg');
+}
+
+.map-legend-li.yellow {
+  background-image: url('../images/rectangle-legend-yellow.svg');
+}
+
+.map-legend-li.red {
+  background-image: url('../images/rectangle-legend-red.svg');
+}
+
+.map-legend-li.green {
+  background-image: url('../images/rectangle-legend-green.svg');
+}
+
+.sources {
+  color: #b38c52;
+}
