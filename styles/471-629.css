@@ -71,6 +71,8 @@ body {
   margin-top: 50px;
   border-radius: .5rem;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .legend {
@@ -135,4 +137,45 @@ body {
 
 .sources {
   color: #b38c52;
+}
+
+@media screen and (max-width: 768px) {
+  .article {
+    padding: 0 10% 90px 5%;
+  }
+
+  .article h1 {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .article h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .article h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .article h6 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .article p {
+    font-size: 11px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .map-legend-li {
+    background-size: 20px auto;
+  }
 }
