@@ -218,3 +218,22 @@ body {
   margin-right: 8px;
   color: #fff;
 }/*# sourceMappingURL=index.css.map */
+
+.slick-prev,
+.slick-next {
+  font-size: 30px;
+  line-height: 1;
+  color: #b38c52!important;
+  z-index: 9999;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
