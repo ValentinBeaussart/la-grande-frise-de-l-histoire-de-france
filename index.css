@@ -221,12 +221,9 @@ body {
 
 .slick-prev,
 .slick-next {
-  font-size: 30px;
-  line-height: 1;
-  color: #b38c52!important;
+  font-size: 36px;
   z-index: 9999;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%!important;
   transition: all 0.3s ease;
 }
 
@@ -235,5 +232,5 @@ body {
 }
 
 .slick-next {
-  right: 20px;
+  right: 3px!important;
 }
