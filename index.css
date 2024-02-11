@@ -234,3 +234,10 @@ body {
 .slick-next {
   right: 3px!important;
 }
+
+@media screen and (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    top: 15%!important;
+  }
+}
