@@ -4,25 +4,23 @@ body {
   font-family: 'Inter', sans-serif;
   letter-spacing: -.025em;
 }
-
 * {
   outline: none;
 }
-
 .article {
   padding: 0px 10% 0px 10%;
   position: relative;
   overflow: hidden;
 }
-
 .article h1 {
   color: rgb(255, 255, 255);
   font-size: 46px;
   line-height: 50pd;
   margin-bottom: 60px;
   font-weight: 900;
+  text-align: center;
+  border-bottom: 1px solid #b38c52;
 }
-
 .article h2 {
   color: rgb(255, 255, 255);
   font-size: 30px;
@@ -31,7 +29,6 @@ body {
   font-weight: 900;
   border-bottom: 1px solid #b38c52;
 }
-
 .article h3 {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -40,7 +37,6 @@ body {
   margin-top: 50px;
   font-weight: 900;
 }
-
 .article h5 {
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -48,7 +44,6 @@ body {
   margin-bottom: 40px;
   font-weight: 900;
 }
-
 .article p {
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -57,14 +52,12 @@ body {
   font-weight: 900;
   line-height: 2.2em;
 }
-
 .info {
   border: 1px solid #171717;
   border-radius: .75rem;
   background-color: #171717;
   padding: 1rem;
 }
-
 .article-img {
   margin-left: auto;
   margin-right: auto;
@@ -74,17 +67,14 @@ body {
   max-width: 100%;
   height: auto;
 }
-
 .legend {
   text-align: center;
   font-size: .875rem;
   line-height: 1.25rem;
 }
-
 .legend p {
-  color: #b38c52!important;
+  color: #b38c52 !important;
 }
-
 .article ul {
   list-style: none;
   color: rgb(255, 255, 255);
@@ -94,7 +84,6 @@ body {
   font-weight: 900;
   line-height: 2.2em;
 }
-
 .basic-li::before {
   content: "•";
   color: #b38c52;
@@ -102,7 +91,6 @@ body {
   width: 1.5em;
   margin-left: -1em;
 }
-
 .map-legend-ul {
   list-style: none;
   color: rgb(255, 255, 255);
@@ -111,41 +99,48 @@ body {
   font-weight: 900;
   line-height: 2.2em;
 }
-
 .map-legend-li {
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-size: 25px auto;
 }
-
 .map-legend-li.blue {
   background-image: url('../images/rectangle-legend-blue.svg');
 }
-
 .map-legend-li.yellow {
   background-image: url('../images/rectangle-legend-yellow.svg');
 }
-
 .map-legend-li.red {
   background-image: url('../images/rectangle-legend-red.svg');
 }
-
 .map-legend-li.green {
   background-image: url('../images/rectangle-legend-green.svg');
 }
-
 .sources {
   color: #b38c52;
 }
-
+#progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.7em;
+  background: #b38c52;
+  z-index: 9999;
+  transition: width 0.5s ease;
+}
 @media screen and (max-width: 768px) {
+  li {
+    font-size: 13px;
+  }
+
   .article {
-    padding: 0 10% 90px 5%;
+    padding: 0 10% 90px 10%;
   }
 
   .article h1 {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 40px;
     margin-bottom: 40px;
   }
@@ -164,13 +159,13 @@ body {
   }
 
   .article h5 {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 30px;
   }
 
   .article p {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 20px;
     margin-bottom: 30px;
   }
@@ -178,15 +173,4 @@ body {
   .map-legend-li {
     background-size: 20px auto;
   }
-}
-
-#progress {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 0.7em;
-  background: #b38c52;
-  z-index: 9999;
-  transition: width 0.5s ease;
 }

@@ -3,11 +3,9 @@ body {
   background-color: #1d1d1e;
   font-family: 'Inter', sans-serif;
 }
-
 * {
   outline: none;
 }
-
 .timeline-carousel {
   padding: 0px 6.9444% 90px 6.9444%;
   position: relative;
@@ -43,6 +41,8 @@ body {
   line-height: 50pd;
   margin-bottom: 40px;
   font-weight: 900;
+  text-align: center;
+  border-bottom: 1px solid #b38c52;
 }
 .timeline-carousel__image {
   padding-right: 30px;
@@ -159,7 +159,6 @@ body {
 .timeline-carousel .slick-active .media-wrapper {
   opacity: 1 !important;
 }
-
 .slick-dots {
   bottom: 60px;
   list-style: none;
@@ -199,7 +198,6 @@ body {
   background: #b38c52;
   border-color: #b38c52;
 }
-
 .link {
   position: absolute;
   left: 0;
@@ -217,8 +215,7 @@ body {
   font-size: 28px;
   margin-right: 8px;
   color: #fff;
-}/*# sourceMappingURL=index.css.map */
-
+}
 .slick-prev,
 .slick-next {
   font-size: 36px;
@@ -226,18 +223,18 @@ body {
   top: 30%!important;
   transition: all 0.3s ease;
 }
-
 .slick-prev {
   left: 20px;
 }
-
 .slick-next {
   right: 3px!important;
 }
-
 @media screen and (max-width: 768px) {
   .slick-prev,
   .slick-next {
     top: 15%!important;
+  }
+  .timeline-carousel h1 {
+    font-size: 30px;
   }
 }
