@@ -171,16 +171,6 @@ body {
   .map-legend-li {
     background-size: 20px auto;
   }
-
-  .article-img-resize {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    border-radius: .5rem;
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
 }
 .btn-next-prev {
   display: flex;
