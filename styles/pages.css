@@ -217,6 +217,16 @@ body {
   height: 500px;
 }
 
+#clovis-bapteme-img {
+  width: 600px;
+  height: auto;
+}
+
+#carte-empire-charlemagne-img {
+  width: 600px;
+  height: auto;
+}
+
 @media only screen and (max-width: 767px) {
   .article-img-resize {
       width: 100%;
