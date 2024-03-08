@@ -165,7 +165,6 @@ body {
 
   .article p {
     font-size: 13px;
-    line-height: 20px;
     margin-bottom: 30px;
   }
 
@@ -205,4 +204,22 @@ body {
   border-radius: 5px;
   background-color: #b38c52;
   color: white;
+}
+
+.article-img-resize {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: .5rem;
+  display: block;
+  max-width: 100%;
+  width: 500px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 767px) {
+  .article-img-resize {
+      width: 100%;
+      height: auto;
+  }
 }
