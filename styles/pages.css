@@ -117,7 +117,10 @@ body {
   background-image: url('../images/rectangle-legend-green.svg');
 }
 .sources {
-  color: #b38c52;
+  margin-top: 6px;
+  height: 1px;
+  border: none;
+  background: #b38c52;
 }
 #progress {
   position: fixed;
