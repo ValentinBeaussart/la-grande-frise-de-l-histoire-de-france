@@ -216,7 +216,6 @@ body {
   margin-right: 8px;
   color: #fff;
 }
-
 .slick-prev,
 .slick-next {
   font-size: 36px;
@@ -230,7 +229,6 @@ body {
 .slick-next {
   right: 3px!important;
 }
-
 @media screen and (max-width: 768px) {
   .slick-prev,
   .slick-next {
@@ -240,7 +238,6 @@ body {
     font-size: 30px;
   }
 }
-
 @media screen and (max-width: 1024px) {
   .slick-prev,
   .slick-next {

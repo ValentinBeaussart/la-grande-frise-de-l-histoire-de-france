@@ -1,0 +1,38 @@
+.navbar {
+    background-color: rgba(29, 29, 30, 0.9);
+    color: #B38C52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: border-bottom 0.3s ease;
+  }
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-content img {
+    height: 60px;
+  }
+  .navbar-content a {
+    margin: auto;
+  }
+  .navbar-scroll {
+    border-bottom: 1px solid #B38C52;
+  }
+  @media (max-width: 768px) {
+    .logo-mobile {
+      display: none;
+    }
+    .navbar-content img {
+      height: 40px;
+    }
+    .navbar-content h1 {
+      font-size: 25px;
+    }
+  }
