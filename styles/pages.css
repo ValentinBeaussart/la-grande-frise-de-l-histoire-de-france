@@ -20,6 +20,8 @@ body {
   margin-bottom: 60px;
   font-weight: 900;
   text-align: center;
+  border-bottom: 1px solid #b38c52;
+
 }
 .article h2 {
   color: rgb(255, 255, 255);
@@ -137,49 +139,41 @@ body {
   li {
     font-size: 13px;
   }
-
   .article {
     padding: 0 10% 0 10%;
   }
-
   .article h1 {
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 40px;
   }
-
   .article h2 {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 30px;
   }
-
   .article h3 {
     font-size: 18px;
     line-height: 24px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-
   .article h5 {
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 30px;
   }
-
   .article p {
     font-size: 13px;
     margin-bottom: 30px;
   }
-
   .map-legend-li {
     background-size: 20px auto;
   }
-
   #progress {
     position: fixed;
     left: 0;
-    top: 64px;
+    top: 65px;
     width: 0%;
     height: 0.7em;
     background: #b38c52;
@@ -187,40 +181,40 @@ body {
     transition: width 0.5s ease;
   }
 }
+@media only screen and (max-width: 767px) {
+  .article-img-resize {
+      width: 100%;
+      height: auto;
+  }
+}
 .btn-next-prev {
   display: flex;
   justify-content: space-between;
 }
-
 .btn-next-prev a {
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
 }
-
 .btn-next-prev a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .previous {
   border-radius: 5px;
   background-color: #b38c52;
   color: white;
 }
-
 .next {
   border-radius: 5px;
   background-color: #b38c52;
   color: white;
 }
-
 .home {
   border-radius: 5px;
   background-color: #b38c52;
   color: white;
 }
-
 .article-img-resize {
   margin-left: auto;
   margin-right: auto;
@@ -231,20 +225,11 @@ body {
   width: 500px;
   height: 500px;
 }
-
 #clovis-bapteme-img {
   width: 600px;
   height: auto;
 }
-
 #carte-empire-charlemagne-img {
   width: 600px;
   height: auto;
-}
-
-@media only screen and (max-width: 767px) {
-  .article-img-resize {
-      width: 100%;
-      height: auto;
-  }
 }
