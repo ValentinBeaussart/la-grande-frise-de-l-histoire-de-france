@@ -7,6 +7,18 @@ body {
 * {
   outline: none;
 }
+.img-portrait {
+  width: 300px;
+  height: 400px;
+}
+.img-carre {
+  width: 400px;
+  height: 400px;
+}
+.img-carte {
+  width: 800px;
+  height: 800px;
+}
 .article {
   margin-top: 60px;
   padding: 0px 10% 0px 10%;

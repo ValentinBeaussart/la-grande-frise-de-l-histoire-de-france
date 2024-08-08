@@ -26,9 +26,6 @@
     border-bottom: 1px solid #B38C52;
   }
   @media (max-width: 768px) {
-    .logo-mobile {
-      display: none;
-    }
     .navbar-content img {
       height: 40px;
     }
