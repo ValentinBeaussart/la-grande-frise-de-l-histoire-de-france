@@ -1,4 +1,4 @@
-article {
+.card {
   --img-scale: 1.001;
   --title-color: black;
   --link-icon-translate: -20px;
@@ -12,7 +12,7 @@ article {
   overflow: hidden;
 }
 
-article a::after {
+.card a::after {
   position: absolute;
   inset-block: 0;
   inset-inline: 0;
@@ -20,7 +20,7 @@ article a::after {
   content: "";
 }
 
-article h2 {
+.card h2 {
   margin: 0 0 18px 0;
   font-family: 'Inter', sans-serif;
   font-size: 1.9rem;
@@ -36,7 +36,7 @@ figure {
   overflow: hidden;
 }
 
-article img {
+.card img {
   max-width: 100%;
   transform-origin: center;
   transform: scale(var(--img-scale));
@@ -47,18 +47,18 @@ article img {
   padding: 24px;
 }
 
-article a {
+.card a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: #ddd;
 }
 
-article a:focus {
+.card a:focus {
   outline: 1px dotted #ddd;
 }
 
-article a .icon {
+.card a .icon {
   min-width: 24px;
   width: 24px;
   height: 24px;
@@ -68,7 +68,7 @@ article a .icon {
   transition: all 0.3s;
 }
 
-article:has(:hover, :focus) {
+.card:has(:hover, :focus) {
   --img-scale: 1.1;
   --title-color: #ddd;
   --link-icon-translate: 0;
@@ -97,6 +97,7 @@ body {
 }
 
 .articles {
+  margin-bottom: 40px;
   display: grid;
   max-width: 1200px;
   margin-inline: auto;
@@ -106,7 +107,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  article {
+  .card {
     container: card/inline-size;
   }
   .article-body p {
