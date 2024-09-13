@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <head>
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87H3QFYLL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+   
+    gtag('config', 'G-87H3QFYLL2');
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -36,7 +46,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+ 
       gtag('config', 'G-87H3QFYLL2');
     </script>
     <section class="timeline-carousel">
@@ -61,7 +71,7 @@
               plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -81,7 +91,7 @@
               plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -100,7 +110,7 @@
               plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -119,7 +129,7 @@
             <a href="moyen-age/814-987.html" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -139,7 +149,7 @@
             <a href="./moyen-age/987-1137.html" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -156,7 +166,7 @@
             <a href="./moyen-age/croisades/index.html" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -173,10 +183,10 @@
               victorieuse de l'Angleterre et du Saint-Empire Germanique. A la
               fin du règne de Philippe Auguste, le royaume de France est le plus
               puissant d'Occident.</p>
-            <a href="#" class="read-more">En savoir plus</a>
+            <a href="./moyen-age/1137-1270.html" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -192,7 +202,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -210,7 +220,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -227,7 +237,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -244,7 +254,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -264,7 +274,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -283,7 +293,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -305,7 +315,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -324,7 +334,7 @@
             <a href="#" class="read-more">En savoir plus</a>
           </div>
         </div>
-
+ 
         <div class="timeline-carousel__item">
           <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay"
@@ -344,8 +354,8 @@
         </div>
       </div>
     </section>
-
-    <div class="footer">
+ 
+    <div class="footer" style="margin-top: 20px;">
       <div class="footer-developer">
         Valentin Beaussart
       </div>
@@ -369,12 +379,12 @@
   $.js = function (el) {
     return $('[data-js=' + el + ']')
   };
-
+ 
   function carousel() {
   $.js('timeline-carousel').slick({
     infinite: false,
     arrows: true,
-    dots: true,
+    dots: false,
     autoplay: false,
     speed: 500,
     centerMode: false,
@@ -390,7 +400,7 @@
       }]
   });
   }
-
+ 
   carousel();</script>
   </body>
 </html>
