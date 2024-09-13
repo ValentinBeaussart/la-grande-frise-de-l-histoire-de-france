@@ -10,11 +10,23 @@
     z-index: 1000;
     transition: border-bottom 0.3s ease;
   }
+  .navbar span {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    color: inherit;
+    font-family: inherit;
+    text-align: inherit;
+    font-style: normal;
+  }
   .navbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .navbar-content img {
     height: 60px;
@@ -29,7 +41,7 @@
     .navbar-content img {
       height: 40px;
     }
-    .navbar-content h1 {
+    .navbar-content span {
       font-size: 25px;
     }
   }
