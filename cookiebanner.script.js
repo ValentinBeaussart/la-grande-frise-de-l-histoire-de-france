@@ -4,47 +4,51 @@ var headerScripts = [{ "title": "Analytics", "type": "analytics", "value": "<!--
 
 var config = { "primaryColor": "#b38c52", "darkColor": "#B38C52", "lightColor": "#1d1d1e", "themeMode": "light", "showSettingsBtn": false, "showCloseIcon": false, "showDeclineBtn": true, "fullWidth": false, "displayPosition": "bottom", "settingsBtnLabel": "Customize", "delay": 2000, "expires": 365, "title": "Cookie Consentement", "description": "This website uses cookie or similar technologies, to enhance your browsing experience and provide personalised recommendations. By continuing to use our website, you agree to our ", "acceptBtnLabel": "Accepter", "declineInfoBtnLabel": "Refuser", "moreInfoBtnLink": "./politique.html", "moreInfoBtnLabel": "Privacy Policy", "cookieTypesTitle": "Select cookies to accept", "necessaryCookieTypeLabel": "Necessary", "necessaryCookieTypeDesc": "These cookies are necessary for the website to function and cannot be switched off in our systems.", "cookieTypes": [{ "type": "Analytics", "value": "analytics", "description": "Analytics cookies allow us to count visits and traffic sources, so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site." }] };
 
-function _slicedToArray(e, c) { return _arrayWithHoles(e) || _iterableToArrayLimit(e, c) || _unsupportedIterableToArray(e, c) || _nonIterableRest() } function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.") } function _unsupportedIterableToArray(e, c) {
-    if (e) {
-        if ("string" == typeof e) return _arrayLikeToArray(e, c)
-        var i = Object.prototype.toString.call(e).slice(8, -1)
-        return "Object" === i && e.constructor && (i = e.constructor.name), "Map" === i || "Set" === i ? Array.from(e) : "Arguments" === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i) ? _arrayLikeToArray(e, c) : void 0
-    }
-} function _arrayLikeToArray(e, c) {
-    (null == c || c > e.length) && (c = e.length)
-    for (var i = 0, r = Array(c); c > i; i++)r[i] = e[i]
-    return r
-} function _iterableToArrayLimit(e, c) {
-    var i = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"]
-    if (null != i) {
-        var r, t, o = [], n = !0, l = !1
-        try { for (i = i.call(e); !(n = (r = i.next()).done) && (o.push(r.value), !c || o.length !== c); n = !0); } catch (a) { l = !0, t = a } finally { try { n || null == i["return"] || i["return"]() } finally { if (l) throw t } } return o
-    }
-} function _arrayWithHoles(e) { return Array.isArray(e) ? e : void 0 } function appendScriptInHead(e) { headerScripts.forEach(function (c) { c.type === e && $("head").append(c.value) }) } var injectScripts = function () { "undefined" != typeof headerScripts && (cookieBanner.isPreferenceAccepted("analytics") === !0 && appendScriptInHead("analytics"), cookieBanner.isPreferenceAccepted("marketing") === !0 && appendScriptInHead("marketing"), cookieBanner.isPreferenceAccepted("preferences") === !0 && appendScriptInHead("preferences")) }
+function appendScriptInHead(e) { 
+    headerScripts.forEach(function (c) { 
+        if (c.type === e) {
+            $("head").append(c.value);
+        }
+    }); 
+}
+
+var injectScripts = function () {
+    "undefined" != typeof headerScripts && (
+        cookieBanner.isPreferenceAccepted("analytics") === true && (
+            appendScriptInHead("analytics"),
+            consentGrantedAdStorage()  // Call the consentGrantedAdStorage function here
+        ),
+        cookieBanner.isPreferenceAccepted("marketing") === true && appendScriptInHead("marketing"),
+        cookieBanner.isPreferenceAccepted("preferences") === true && appendScriptInHead("preferences")
+    );
+};
 
 !function (e) {
-    var c = this
+    var c = this;
     e.fn.cookieBanner = function () {
-        e(":root").css("--cookieBannerLight", config.lightColor), e(":root").css("--cookieBannerDark", config.darkColor)
-        var c = i("cookieConsent")
-        if (c) injectScripts()
-        else {
-            e("#cookieBanner").remove()
-            var n = '<li><input type="checkbox" name="gdprPrefItem" value="necessary" checked="checked" disabled="disabled" data-compulsory="on"> <label title="' + config.necessaryCookieTypeDesc + '">' + config.necessaryCookieTypeLabel + "</label></li>"
+        e(":root").css("--cookieBannerLight", config.lightColor), e(":root").css("--cookieBannerDark", config.darkColor);
+        var c = i("cookieConsent");
+        if (c) {
+            injectScripts();
+        } else {
+            e("#cookieBanner").remove();
+            var n = '<li><input type="checkbox" name="gdprPrefItem" value="necessary" checked="checked" disabled="disabled" data-compulsory="on"> <label title="' + config.necessaryCookieTypeDesc + '">' + config.necessaryCookieTypeLabel + "</label></li>";
             e.each(config.cookieTypes, function (e, c) {
                 if ("" !== c.type && "" !== c.value) {
-                    var i = ""
-                    c.description !== !1 && (i = ' title="' + c.description + '"'), n += '<li><input type="checkbox" id="gdprPrefItem' + c.value + '" name="gdprPrefItem" value="' + c.value + '" data-compulsory="on"> <label for="gdprPrefItem' + c.value + '"' + i + ">" + c.type + "</label></li>"
+                    var i = "";
+                    c.description !== !1 && (i = ' title="' + c.description + '"'), n += '<li><input type="checkbox" id="gdprPrefItem' + c.value + '" name="gdprPrefItem" value="' + c.value + '" data-compulsory="on"> <label for="gdprPrefItem' + c.value + '"' + i + ">" + c.type + "</label></li>";
                 }
-            })
-            var p = '<div id="cookieBanner" class="' + config.themeMode + " display-" + config.displayPosition + " full-width-" + config.fullWidth + '"><div id="closeIcon">' + s + '</div><div class="title-wrap">' + a + "<h4>" + config.title + '</h4></div><div class="content-wrap"><div class="msg-wrap"><p>' + config.description + ' <a style="color:' + config.primaryColor + ';" href="' + config.moreInfoBtnLink + '">' + config.moreInfoBtnLabel + '</a></p><div id="cookieSettings">' + l + config.settingsBtnLabel + '</div><div id="cookieTypes" style="display:none;"><h5>' + config.cookieTypesTitle + "</h5><ul>" + n + '</ul></div></div><div class="btn-wrap"><button id="cookieAccept" style="color:' + config.lightColor + ";background:" + config.primaryColor + ";border: 1px solid " + config.primaryColor + ';" type="button">' + config.acceptBtnLabel + '</button><button id="cookieReject" style="color:' + config.primaryColor + ";border: 1px solid " + config.primaryColor + ';" type="button">' + config.declineInfoBtnLabel + "</button></div>"
-            setTimeout(function () { e("body").append(p), e("#cookieBanner").hide().fadeIn("slow"), config.showSettingsBtn || e("#cookieSettings").hide(), config.showDeclineBtn || e("#cookieReject").hide(), config.showCloseIcon || e("#closeIcon").hide() }, config.delay), e("body").on("click", "#cookieAccept", function () {
-                r(!0, config.expires), e('input[name="gdprPrefItem"][data-compulsory="on"]').prop("checked", !0)
-                var c = []
-                e.each(e('input[name="gdprPrefItem"]').serializeArray(), function (e, i) { c.push(i.value) }), t("cookieConsentPrefs", encodeURIComponent(JSON.stringify(c)), { expires: o(365), path: "/" }), injectScripts()
-            }), e("body").on("click", "#cookieSettings", function () { e('input[name="gdprPrefItem"]:not(:disabled)').attr("data-compulsory", "off").prop("checked", !0), e("#cookieTypes").toggle("fast", function () { e("#cookieSettings").prop("disabled", !1) }) }), e("body").on("click", "#closeIcon", function () { e("#cookieBanner").remove() }), e("body").on("click", "#cookieReject", function () { r(!1, config.expires), t("cookieConsentPrefs", "", { expires: o(-365), path: "/" }) })
+            });
+            var p = '<div id="cookieBanner" class="' + config.themeMode + " display-" + config.displayPosition + " full-width-" + config.fullWidth + '"><div id="closeIcon">' + s + '</div><div class="title-wrap">' + a + "<h4>" + config.title + '</h4></div><div class="content-wrap"><div class="msg-wrap"><p>' + config.description + ' <a style="color:' + config.primaryColor + ';" href="' + config.moreInfoBtnLink + '">' + config.moreInfoBtnLabel + '</a></p><div id="cookieSettings">' + l + config.settingsBtnLabel + '</div><div id="cookieTypes" style="display:none;"><h5>' + config.cookieTypesTitle + "</h5><ul>" + n + '</ul></div></div><div class="btn-wrap"><button id="cookieAccept" style="color:' + config.lightColor + ";background:" + config.primaryColor + ";border: 1px solid " + config.primaryColor + ';" type="button">' + config.acceptBtnLabel + '</button><button id="cookieReject" style="color:' + config.primaryColor + ";border: 1px solid " + config.primaryColor + ';" type="button">' + config.declineInfoBtnLabel + "</button></div>";
+            setTimeout(function () { e("body").append(p), e("#cookieBanner").hide().fadeIn("slow"), config.showSettingsBtn || e("#cookieSettings").hide(), config.showDeclineBtn || e("#cookieReject").hide(), config.showCloseIcon || e("#closeIcon").hide(); }, config.delay), e("body").on("click", "#cookieAccept", function () {
+                r(!0, config.expires), e('input[name="gdprPrefItem"][data-compulsory="on"]').prop("checked", !0);
+                var c = [];
+                e.each(e('input[name="gdprPrefItem"]').serializeArray(), function (e, i) { c.push(i.value); });
+                t("cookieConsentPrefs", encodeURIComponent(JSON.stringify(c)), { expires: o(365), path: "/" });
+                injectScripts();
+            }), e("body").on("click", "#cookieSettings", function () { e('input[name="gdprPrefItem"]:not(:disabled)').attr("data-compulsory", "off").prop("checked", !0), e("#cookieTypes").toggle("fast", function () { e("#cookieSettings").prop("disabled", !1); }); }), e("body").on("click", "#closeIcon", function () { e("#cookieBanner").remove(); }), e("body").on("click", "#cookieReject", function () { r(!1, config.expires), t("cookieConsentPrefs", "", { expires: o(-365), path: "/" }); });
         }
-    }
+    };
     var i = function (e) { return document.cookie.indexOf(e) > -1 ? !0 : !1 }, r = function (i, r) { t("cookieConsent", i, { expires: o(r), path: "/" }), e("#cookieBanner").fadeOut("fast", function () { e(c).remove() }) }, t = function (e, c) {
         var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
         document.cookie = "".concat(e, "=").concat(c).concat(Object.keys(i).reduce(function (e, c) { return e + ";".concat(c.replace(/([A-Z])/g, function (e) { return "-" + e.toLowerCase() }), "=").concat(i[c]) }, ""))
