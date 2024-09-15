@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-            <!-- Google tag (gtag.js) -->
-            <script async
-                src="https://www.googletagmanager.com/gtag/js?id=G-87H3QFYLL2"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-   
-                gtag('config', 'G-87H3QFYLL2');
+        <script>
+            // Define dataLayer and the gtag function.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Set default consent to 'denied' as a placeholder
+            // Determine actual values based on your own requirements
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
             </script>
-            <!-- jQuery -->
-            <script
-                src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-            <!-- Cookie Banner -->
-            <link rel="stylesheet" href="cookiebanner.style.css">
-            <script src="cookiebanner.script.js"></script>
-            <style>
-        *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;}
-    </style>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-87H3QFYLL2">
+            </script>
             <script>
-        $(document).ready(function() {
-            cookieBanner.init();
-        });
-    </script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+            
+              gtag('js', new Date());
+              gtag('config', '87H3QFYLL2');
+            </script>
+            
+            <!-- Create one update function for each consent parameter -->
+            <script>
+              function consentGrantedAdStorage() {
+                gtag('consent', 'update', {
+                  'ad_storage': 'granted'
+                });
+              }
+            </script>
+                <!-- jQuery -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7b66bef3eeba4972f72c0c3d/script.js"></script> <!-- End cookieyes banner -->      
             <meta charset="UTF-8">
             <meta name="viewport"
                 content="width=device-width, initial-scale=1.0">
